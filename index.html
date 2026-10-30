@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>L&amp;R Parfums — La esencia de Oriente</title>
+  <meta name="description" content="Perfumes árabes originales desde $19.99. Recorre el mundo de L&R Parfums, encuentra tu aroma y compra en línea. Envíos a todo USA." />
+  <meta name="theme-color" content="#1A0A0F" />
+  <meta property="og:title" content="L&R Parfums — La esencia de Oriente" />
+  <meta property="og:description" content="Perfumes árabes originales desde $19.99. Envíos a todo USA." />
+  <meta property="og:image" content="assets/stills/palacio.webp" />
+  <link rel="icon" href="assets/brand/logo-96.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root, .sw-root {
+      --sw-bg: #1A0A0F; --sw-ink: #F6F0E6; --sw-ink-soft: #CBB9A6; --sw-accent: #D8A84E;
+      --sw-font-display: "Cormorant Garamond", Georgia, serif; --sw-font-body: "Jost", system-ui, sans-serif;
+      --gold: #D8A84E; --gold-d: #A87B2E; --wine: #5A1F2B; --cream: #F6F0E6; --cream-2: #EFE2CF; --ink: #241306; --ink-soft: #6B5646;
+    }
+    html, body { background: var(--sw-bg); }
+    body { font-family: var(--sw-font-body); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+
+    /* ---- scroll-world chrome, wine & gold ---- */
+    .sw-topbar { background: linear-gradient(180deg, var(--sw-bg), color-mix(in srgb, var(--sw-bg) 60%, transparent) 65%, transparent); transition: background .3s; }
+    .in-shop .sw-topbar { background: var(--sw-bg); box-shadow: 0 8px 24px -16px rgba(0, 0, 0, .6); }
+    .in-shop .sw-hint { opacity: 0 !important; }
+    .sw-sky__glow { background: radial-gradient(55% 45% at 72% 30%, color-mix(in srgb, var(--sw-accent) 14%, transparent), transparent 70%); }
+    .sw-brand__mark { width: 40px; height: 40px; border-radius: 50%; box-shadow: 0 0 0 1px rgba(216, 168, 78, .5), 0 6px 18px -6px rgba(216, 168, 78, .6); background: url("assets/brand/logo.webp") center/cover no-repeat; }
+    .sw-brand__name { font-family: var(--sw-font-display); font-size: 1.35rem; font-weight: 700; letter-spacing: .04em; }
+    .sw-nav { background: rgba(26, 10, 15, .6); border-color: rgba(216, 168, 78, .25); }
+    .sw-nav__item { color: var(--sw-ink-soft); letter-spacing: .04em; }
+    .sw-nav__item.is-active { color: #1A0A0F; }
+    .sw-topcta { color: #1A0A0F; background: var(--gold); letter-spacing: .04em; }
+    .sw-copy__eyebrow { font-family: var(--sw-font-body); font-weight: 500; letter-spacing: .24em; font-size: .74rem; }
+    .sw-copy__title { font-weight: 600; font-size: clamp(2.5rem, 5.4vw, 4.4rem); line-height: .98; letter-spacing: 0; }
+    .sw-copy__body { font-weight: 300; }
+    .sw-copy__tags li { font-weight: 500; color: var(--cream); background: rgba(90, 31, 43, .55); border-color: rgba(216, 168, 78, .45); }
+    .sw-btn--primary { background: var(--gold); color: #1A0A0F; }
+    .sw-btn--ghost { color: var(--cream); border-color: rgba(246, 240, 230, .35); }
+    .sw-route__label { background: rgba(26, 10, 15, .9); color: var(--cream); }
+    @media (min-width: 861px) { .sw-copylayer::before { width: min(60vw, 800px); } }
+    @media (max-width: 860px) { .sw-copy { right: 44px; } .sw-copy__tags li { font-size: .76rem; padding: 6px 11px; } }
+
+    /* ---- boutique ---- */
+    .bq { position: relative; z-index: 45; background: var(--cream); color: var(--ink); }
+    .strip { background: var(--wine); color: var(--cream); display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 28px; padding: 14px 16px; font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; }
+    .strip span::before { content: "✦ "; color: var(--gold); }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) clamp(16px, 4vw, 48px); }
+    .eb { font-size: .74rem; letter-spacing: .24em; text-transform: uppercase; color: var(--gold-d); font-weight: 500; }
+    .h2 { font-family: var(--sw-font-display); font-weight: 600; font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1; margin: 12px 0 14px; }
+    .lede { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.6; max-width: 58ch; margin: 0; font-weight: 300; }
+
+    /* quiz */
+    .quiz { margin-top: 40px; border-radius: 28px; padding: clamp(22px, 4vw, 44px); color: var(--cream);
+      background: radial-gradient(90% 120% at 100% 0%, rgba(216, 168, 78, .22), transparent 55%), linear-gradient(160deg, #3A1420, #1A0A0F); position: relative; overflow: hidden; }
+    .quiz::after { content: ""; position: absolute; right: -60px; bottom: -60px; width: 260px; height: 260px; opacity: .08;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 1l4.4 6.6L28 6l-1.6 7.6L32 16l-5.6 2.4L28 26l-7.6-1.6L16 31l-4.4-6.6L4 26l1.6-7.6L0 16l5.6-2.4L4 6l7.6 1.6z' fill='%23D8A84E'/%3E%3C/svg%3E") center/contain no-repeat; pointer-events: none; }
+    .quiz__top { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .quiz__steps { display: flex; gap: 6px; }
+    .quiz__steps i { width: 28px; height: 3px; border-radius: 2px; background: rgba(246, 240, 230, .2); }
+    .quiz__steps i.on { background: var(--gold); }
+    .quiz h3 { font-family: var(--sw-font-display); font-weight: 600; font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin: 18px 0 20px; }
+    .opts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; position: relative; z-index: 1; }
+    .opt { font: inherit; text-align: left; cursor: pointer; color: var(--cream); background: rgba(246, 240, 230, .06); border: 1px solid rgba(216, 168, 78, .35);
+      border-radius: 16px; padding: 16px; transition: background .2s, transform .2s, border-color .2s; }
+    .opt:hover { background: rgba(216, 168, 78, .16); transform: translateY(-2px); border-color: var(--gold); }
+    .opt b { display: block; font-size: 1.02rem; font-weight: 500; }
+    .opt span { display: block; font-size: .82rem; color: var(--sw-ink-soft); margin-top: 4px; font-weight: 300; }
+    .opt em { font-style: normal; font-size: 1.4rem; display: block; margin-bottom: 6px; }
+    .quiz__res { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; position: relative; z-index: 1; }
+    .quiz__again { margin-top: 18px; background: none; border: 0; color: var(--gold); font: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; padding: 0; }
+
+    /* filters */
+    .tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin: 64px 0 22px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { font: inherit; font-size: .88rem; cursor: pointer; padding: 9px 16px; border-radius: 999px; border: 1px solid rgba(36, 19, 6, .18); background: transparent; color: var(--ink); transition: all .2s; }
+    .chip.on { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+    .search { flex: 1 1 220px; max-width: 320px; font: inherit; padding: 11px 16px; border-radius: 999px; border: 1px solid rgba(36, 19, 6, .18); background: #fff; color: var(--ink); }
+    .count { font-size: .85rem; color: var(--ink-soft); margin-bottom: 14px; }
+
+    /* cards */
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+    .card { position: relative; background: #fff; border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 0 rgba(36, 19, 6, .06), 0 10px 30px -18px rgba(36, 19, 6, .35); transition: transform .25s, box-shadow .25s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 1px 0 rgba(36, 19, 6, .06), 0 22px 40px -20px rgba(36, 19, 6, .45); }
+    .card__img { position: relative; aspect-ratio: 600/740; background: radial-gradient(70% 55% at 50% 58%, color-mix(in srgb, var(--c) 30%, #fff), color-mix(in srgb, var(--c) 10%, var(--cream-2)) 75%); overflow: hidden; }
+    .card__img img { position: absolute; inset: 4% 0 0; width: 100%; height: 96%; object-fit: contain; object-position: center bottom; transition: transform .5s; }
+    .card:hover .card__img img { transform: scale(1.05) rotate(-1.5deg); }
+    .card__img::after { content: ""; position: absolute; left: 22%; right: 22%; bottom: 9%; height: 7%; border-radius: 50%; background: radial-gradient(closest-side, rgba(36, 19, 6, .28), transparent); }
+    .card__tag { position: absolute; top: 12px; left: 12px; z-index: 1; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; background: rgba(255, 255, 255, .78); backdrop-filter: blur(6px); }
+    .card__body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+    .card__name { font-family: var(--sw-font-display); font-weight: 600; font-size: 1.32rem; line-height: 1.1; }
+    .card__meta { font-size: .82rem; color: var(--ink-soft); }
+    .card__row { margin-top: auto; padding-top: 10px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .price { font-weight: 600; font-size: 1.08rem; }
+    .add { font: inherit; font-size: .86rem; font-weight: 500; cursor: pointer; border: 0; border-radius: 999px; padding: 10px 16px; background: var(--ink); color: var(--cream); transition: background .2s, transform .2s; }
+    .add:hover { background: var(--wine); }
+    .add.done { background: var(--gold); color: var(--ink); }
+    .card--mayor { grid-column: span 2; flex-direction: row; background: linear-gradient(140deg, #3A1420, #1A0A0F); color: var(--cream); }
+    .card--mayor .card__img { flex: 0 0 46%; aspect-ratio: auto; background: radial-gradient(70% 60% at 50% 55%, rgba(216, 168, 78, .3), transparent 70%); }
+    .card--mayor .card__open { flex: 0 0 50%; display: block; }
+    @media (min-width: 1000px) { .card--mayor { grid-column: span 3; } }
+    .card--mayor .card__open .card__img { height: 100%; }
+    .card--mayor .card__img img { inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; background: #140609; }
+    .card--mayor .card__body { padding: 24px; justify-content: center; }
+    .card--mayor .card__name { font-size: 1.9rem; }
+    .card--mayor .card__meta { color: var(--sw-ink-soft); }
+    .card--mayor .add { background: var(--gold); color: var(--ink); }
+    .card--mayor ul { margin: 10px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; font-size: .9rem; font-weight: 300; }
+    .card--mayor li::before { content: "✦ "; color: var(--gold); }
+    .quiz .card { color: var(--ink); }
+    .card__open { all: unset; cursor: pointer; display: block; }
+    .card__open:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
+    .card--photo .card__img { aspect-ratio: 4/5; background: #2a1218; }
+    .card--photo .card__img img { inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .card--photo .card__img::after { display: none; }
+    .card__house { font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-d); }
+    .card__notes { font-size: .8rem; color: var(--ink-soft); line-height: 1.35; font-weight: 300; }
+    .modal { position: fixed; inset: 0; z-index: 90; display: grid; place-items: center; padding: 16px; background: rgba(10, 4, 6, .7); opacity: 0; pointer-events: none; transition: opacity .25s; }
+    .modal.open { opacity: 1; pointer-events: auto; }
+    .modal__p { position: relative; width: min(940px, 100%); max-height: calc(100dvh - 32px); overflow: auto; background: var(--cream); color: var(--ink); border-radius: 26px; display: grid; grid-template-columns: 1fr 1fr; transform: translateY(12px); transition: transform .25s; }
+    .modal.open .modal__p { transform: none; }
+    .modal__img { background: radial-gradient(70% 55% at 50% 58%, color-mix(in srgb, var(--c) 30%, #fff), color-mix(in srgb, var(--c) 10%, var(--cream-2)) 75%); min-height: 320px; }
+    .modal__img img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    .modal__img.photo { background: #1A0A0F; }
+    .modal__b { padding: clamp(22px, 3.5vw, 40px); display: flex; flex-direction: column; gap: 10px; }
+    .modal__b h3 { font-family: var(--sw-font-display); font-weight: 600; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1; margin: 0; }
+    .modal__b p { margin: 0; color: var(--ink-soft); line-height: 1.55; font-weight: 300; }
+    .notes { list-style: none; padding: 0; margin: 8px 0; display: grid; gap: 10px; }
+    .notes li { display: grid; grid-template-columns: 92px 1fr; gap: 10px; padding: 10px 0; border-top: 1px solid rgba(36, 19, 6, .1); font-size: .95rem; }
+    .notes b { font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-d); font-weight: 500; padding-top: 3px; }
+    .modal__row { margin-top: auto; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding-top: 10px; }
+    .modal__row .price { font-size: 1.4rem; }
+    .modal .x { position: absolute; top: 10px; right: 10px; z-index: 2; background: rgba(246, 240, 230, .9); border-radius: 50%; width: 40px; height: 40px; }
+    @media (max-width: 720px) { .modal__p { grid-template-columns: 1fr; } .modal__img { min-height: 0; max-height: 52vh; } .modal__img img { max-height: 52vh; } }
+    .empty { padding: 40px; text-align: center; color: var(--ink-soft); grid-column: 1/-1; }
+
+    /* cart */
+    .fab { position: fixed; z-index: 70; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); display: flex; align-items: center; gap: 10px; border: 0; cursor: pointer;
+      font: inherit; font-weight: 500; padding: 14px 20px; border-radius: 999px; background: var(--gold); color: var(--ink); box-shadow: 0 12px 30px -10px rgba(0, 0, 0, .5);
+      transform: translateY(140%); transition: transform .35s cubic-bezier(.2, .9, .3, 1.2); }
+    .fab.show { transform: none; }
+    .fab .n { background: var(--ink); color: var(--cream); border-radius: 999px; min-width: 24px; height: 24px; display: grid; place-items: center; font-size: .8rem; padding: 0 6px; }
+    .fab.bump { animation: bump .4s; }
+    @keyframes bump { 40% { transform: scale(1.08); } }
+    .drawer { position: fixed; inset: 0; z-index: 80; pointer-events: none; }
+    .drawer__bg { position: absolute; inset: 0; background: rgba(10, 4, 6, .55); opacity: 0; transition: opacity .3s; }
+    .drawer__p { position: absolute; top: 0; right: 0; bottom: 0; width: min(420px, 100%); background: var(--cream); color: var(--ink); transform: translateX(100%); transition: transform .35s; display: flex; flex-direction: column; }
+    .drawer.open { pointer-events: auto; } .drawer.open .drawer__bg { opacity: 1; } .drawer.open .drawer__p { transform: none; }
+    .drawer__h { display: flex; justify-content: space-between; align-items: center; padding: 20px 20px 14px; border-bottom: 1px solid rgba(36, 19, 6, .1); }
+    .drawer__h h3 { font-family: var(--sw-font-display); font-size: 1.8rem; margin: 0; font-weight: 600; }
+    .x { font: inherit; font-size: 1.6rem; background: none; border: 0; cursor: pointer; color: var(--ink); line-height: 1; padding: 4px 8px; }
+    .lines { flex: 1; overflow: auto; padding: 8px 20px; }
+    .line { display: grid; grid-template-columns: 64px 1fr auto; gap: 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(36, 19, 6, .08); }
+    .line img { width: 64px; height: 74px; object-fit: cover; border-radius: 12px; background: var(--cream-2); }
+    .line b { font-family: var(--sw-font-display); font-size: 1.15rem; font-weight: 600; display: block; }
+    .line small { color: var(--ink-soft); }
+    .qty { display: flex; align-items: center; gap: 6px; }
+    .qty button { width: 28px; height: 28px; border-radius: 50%; border: 1px solid rgba(36, 19, 6, .2); background: #fff; cursor: pointer; font: inherit; }
+    .drawer__f { padding: 18px 20px calc(18px + env(safe-area-inset-bottom)); border-top: 1px solid rgba(36, 19, 6, .1); }
+    .tot { display: flex; justify-content: space-between; font-size: 1.1rem; margin-bottom: 12px; }
+    .tot b { font-size: 1.3rem; }
+    .checkout { display: block; text-align: center; text-decoration: none; padding: 16px; border-radius: 999px; background: var(--ink); color: var(--cream); font-weight: 500; letter-spacing: .04em; }
+    .note { font-size: .78rem; color: var(--ink-soft); margin-top: 10px; text-align: center; }
+
+    footer { background: #120609; color: var(--sw-ink-soft); position: relative; z-index: 45; text-align: center; padding: 48px 16px calc(96px + env(safe-area-inset-bottom)); font-size: .85rem; }
+    footer .logo { font-family: var(--sw-font-display); font-size: 2rem; color: var(--cream); font-weight: 600; }
+    footer p { margin: 8px 0 0; }
+    @media (max-width: 720px) {
+      .card--mayor .card__open { flex: none; } .card--mayor .card__open .card__img { aspect-ratio: 1; height: auto; }
+      .grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .card__name { font-size: 1.1rem; } .card__body { padding: 10px 12px 12px; }
+      .card__row { flex-direction: column; align-items: stretch; } .add { width: 100%; }
+      .card--mayor { flex-direction: column; } .card--mayor .card__img { aspect-ratio: 600/520; }
+      .quiz__res { grid-template-columns: 1fr 1fr; }
+      .tools { margin-top: 48px; } .search { max-width: none; }
+    }
+    @media (prefers-reduced-motion: reduce) { .card, .card__img img, .fab, .drawer__p { transition: none; } }
+  </style>
+</head>
+<body>
+  <div id="top"></div>
+  <div id="world"></div>
+
+  <section class="bq" id="catalogo" aria-labelledby="bq-title">
+    <div class="strip"><span>Perfumes árabes originales</span><span>Envíos a todo USA</span><span>Ventas al mayor</span></div>
+    <div class="wrap">
+      <span class="eb">La boutique</span>
+      <h2 class="h2" id="bq-title">Encuentra tu aroma.</h2>
+      <p class="lede">Responde tres preguntas y te recomendamos tres fragancias, o explora la colección completa: más de 35 perfumes desde $19.99.</p>
+
+      <div class="quiz" id="quiz" aria-live="polite"></div>
+
+      <div class="tools">
+        <div class="chips" id="chips" role="tablist" aria-label="Colecciones"></div>
+        <input class="search" id="search" type="search" placeholder="Buscar perfume…" aria-label="Buscar perfume" />
+      </div>
+      <div class="count" id="count"></div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="logo">L&amp;R Parfums</div>
+    <p>La esencia de Oriente · Envíos a todo USA</p>
+    <p><a href="https://lrparfums.myshopify.com" target="_blank" rel="noopener">lrparfums.myshopify.com</a></p>
+  </footer>
+
+  <button class="fab" id="fab" aria-label="Ver carrito"><span>🛍</span><span id="fabTxt">Tu selección</span><span class="n" id="fabN">0</span></button>
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__bg" data-close></div>
+    <aside class="drawer__p" role="dialog" aria-label="Tu selección">
+      <div class="drawer__h"><h3>Tu selección</h3><button class="x" data-close aria-label="Cerrar">×</button></div>
+      <div class="lines" id="lines"></div>
+      <div class="drawer__f">
+        <div class="tot"><span>Total</span><b id="tot">$0.00</b></div>
+        <a class="checkout" id="checkout" href="#" target="_blank" rel="noopener">Finalizar compra en la tienda</a>
+        <p class="note">Pagas de forma segura en la tienda oficial de L&amp;R Parfums.</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="modal" id="modal" aria-hidden="true"><div class="modal__p" role="dialog" aria-modal="true" aria-labelledby="mTitle" id="modalP"></div></div>
+  <script src="catalog.js"></script>
+  <script src="scrub-engine.js"></script>
+  <script>
+  (function () {
+    var STORE = 'https://lrparfums.myshopify.com';
+    var CAT = window.CATALOG;
+    var V = 'assets/vid/', S = 'assets/stills/';
+    function sec(id, o) { o.id = id; o.still = S + id + '.webp'; o.stillMobile = S + id + '-m.webp'; o.clip = V + id + '.mp4'; o.clipMobile = V + id + '-m.mp4'; return o; }
+
+    mountScrollWorld(document.getElementById('world'), {
+      brand: { name: 'L&R Parfums', href: '#top' },
+      cta: { label: 'Comprar', href: '#catalogo' },
+      hint: 'Desliza para descubrir',
+      diveScroll: 1.35, connScroll: 0.85,
+      sections: [
+        sec('palacio', { label: 'L&R', accent: '#D8A84E', scroll: 1.6, linger: 0.35,
+          eyebrow: 'L&R Parfums · Perfumería árabe', title: 'La esencia de Oriente.',
+          body: 'Perfumes árabes originales de Lattafa, Zakat, Le Falcone, Odyssey y más, desde $19.99. Recorre nuestro mundo y descubre la fragancia que va contigo.',
+          tags: ['Originales', 'Desde $19.99', 'Envíos a todo USA'] }),
+        sec('gourmand', { label: 'Gourmand', accent: '#E8A07A',
+          eyebrow: 'Dulce & gourmand', title: 'Aromas que se antojan.',
+          body: 'Pistacho, caramelo, café y macarons: fragancias golosas que envuelven y se recuerdan.',
+          tags: ['Éclaire Pistache', 'Khamrah Qahwa', 'Decadent Delights'] }),
+        sec('floral', { label: 'Floral', accent: '#E58FA6', linger: 0.3,
+          eyebrow: 'Florales & femeninos', title: 'Un jardín en cada frasco.',
+          body: 'Fragancias florales y delicadas para quien deja huella al pasar.',
+          tags: ['Pink Aura', 'Hayaati Florence', 'Bonita Pour Femme'] }),
+        sec('oud', { label: 'Oud & Oriente', accent: '#F0B45A', linger: 0.3,
+          eyebrow: 'Oud & noches de Oriente', title: 'La noche huele a oud.',
+          body: 'Maderas, ámbar y especias: la tradición árabe más intensa, de Oud Elixir a la colección Laylat Al Nujoom.',
+          tags: ['Oud Elixir', 'Ramz Lattafa', 'Ajayeb Dubai'] }),
+        sec('fresco', { label: 'Fresco', accent: '#5FC3D9',
+          eyebrow: 'Fresco & intenso', title: 'Energía de la mañana a la noche.',
+          body: 'Cítricos, aires marinos y aromas intensos para el día a día y para salir.',
+          tags: ['Odyssey Limoni', 'Cadet Blue', 'Turbo #Final Lap'] }),
+        sec('mayor', { label: 'Al mayor', accent: '#D8A84E', scroll: 1.6, linger: 0.3,
+          eyebrow: 'Ventas al mayor', title: 'Haz de L&R tu negocio.',
+          body: 'Caja de 50 perfumes árabes surtidos a precio especial, con asesoría personalizada y envíos a todo USA.',
+          tags: ['50 piezas · $549.99', 'Asesoría personalizada'],
+          cta: { primary: { label: 'Ver la boutique', href: '#catalogo' }, secondary: { label: 'Encuentra tu aroma', href: '#quiz' } } }),
+      ],
+      connectors: [1, 2, 3, 4, 5].map(function (n) { return V + 'conn' + n + '.mp4'; }),
+      connectorsMobile: [1, 2, 3, 4, 5].map(function (n) { return V + 'conn' + n + '-m.mp4'; }),
+    });
+
+    // ---------- catalog ----------
+    var COLS = { gourmand: 'Gourmand', floral: 'Floral', oud: 'Oud & Oriente', fresco: 'Fresco & intenso', mayor: 'Al mayor' };
+    var money = function (n) { return '$' + Number(n).toFixed(2); };
+    var img = function (p) { return p.photo ? 'assets/photos/card/' + p.h + '.webp' : 'assets/bottles/' + p.h + '.webp'; };
+    var full = function (p) { return p.photo ? 'assets/photos/full/' + p.h + '.webp' : 'assets/bottles/' + p.h + '.webp'; };
+    var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+    var byH = {}; CAT.forEach(function (p) { byH[p.h] = p; });
+
+    function cardHTML(p) {
+      if (p.c === 'mayor') {
+        return '<article class="card card--mayor" style="--c:' + p.liq + '"><button class="card__open" data-open="' + p.h + '" aria-label="Ver venta al mayor"><div class="card__img"><img loading="lazy" src="' + img(p) + '" alt="Venta al mayor L&amp;R Parfums"></div></button>' +
+          '<div class="card__body"><span class="eb">Para tu negocio</span><div class="card__name">' + esc(p.t) + '</div>' +
+          '<div class="card__meta">50 perfumes árabes originales y surtidos en una sola caja.</div>' +
+          '<ul><li>Precio especial al mayor</li><li>Asesoría personalizada</li><li>Envíos a todo USA</li></ul>' +
+          '<div class="card__row"><span class="price">' + money(p.p) + '</span><button class="add" data-add="' + p.h + '">Agregar</button></div></div></article>';
+      }
+      return '<article class="card' + (p.photo ? ' card--photo' : '') + '" style="--c:' + p.liq + '"><button class="card__open" data-open="' + p.h + '" aria-label="Ver ficha de ' + esc(p.t) + '"><div class="card__img"><span class="card__tag">' + COLS[p.c] + '</span>' +
+        '<img loading="lazy" src="' + img(p) + '" alt="' + esc(p.t) + '"></div></button><div class="card__body">' +
+        (p.house ? '<div class="card__house">' + esc(p.house) + '</div>' : '') +
+        '<div class="card__name">' + esc(p.t) + '</div>' +
+        (p.notes ? '<div class="card__notes">' + esc(p.notes[0]) + '</div>' : '') +
+        '<div class="card__meta">' + esc(p.s) + ' · <a href="#" data-open="' + p.h + '">Ver ficha</a></div>' +
+        '<div class="card__row"><span class="price">' + money(p.p) + '</span><button class="add" data-add="' + p.h + '">Agregar</button></div></div></article>';
+    }
+
+    var state = { col: 'all', q: '' };
+    var chips = document.getElementById('chips');
+    [['all', 'Todos']].concat(Object.keys(COLS).map(function (k) { return [k, COLS[k]]; })).forEach(function (c) {
+      var b = document.createElement('button'); b.className = 'chip' + (c[0] === 'all' ? ' on' : ''); b.textContent = c[1]; b.dataset.col = c[0];
+      b.setAttribute('role', 'tab'); chips.appendChild(b);
+    });
+    chips.addEventListener('click', function (e) {
+      var b = e.target.closest('.chip'); if (!b) return;
+      state.col = b.dataset.col; chips.querySelectorAll('.chip').forEach(function (x) { x.classList.toggle('on', x === b); }); render();
+    });
+    document.getElementById('search').addEventListener('input', function (e) { state.q = e.target.value.trim().toLowerCase(); render(); });
+    function norm(s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+    function render() {
+      var list = CAT.filter(function (p) { var hay = norm(p.t + ' ' + (p.house || '') + ' ' + (p.notes || []).join(' ')); return (state.col === 'all' || p.c === state.col) && (!state.q || hay.indexOf(norm(state.q)) > -1); });
+      list.sort(function (a, b) { return ((a.c === 'mayor') - (b.c === 'mayor')) || ((b.photo ? 1 : 0) - (a.photo ? 1 : 0)); });
+      document.getElementById('grid').innerHTML = list.length ? list.map(cardHTML).join('') : '<div class="empty">No encontramos ese perfume. Prueba con otro nombre.</div>';
+      var n = list.filter(function (p) { return p.c !== 'mayor'; }).length;
+      document.getElementById('count').textContent = n + (n === 1 ? ' perfume' : ' perfumes');
+      syncButtons();
+    }
+
+    // ---------- quiz ----------
+    var QS = [
+      { k: 'who', q: '¿Para quién es?', o: [['ella', '🌸', 'Para ella', 'Femenino y delicado'], ['el', '🌙', 'Para él', 'Masculino e intenso'], ['todos', '✦', 'Para compartir', 'Sin etiquetas']] },
+      { k: 'fam', q: '¿Qué aroma te atrae?', o: [['gourmand', '🍮', 'Dulce', 'Pistacho, café, caramelo'], ['floral', '🌹', 'Floral', 'Rosas y flores'], ['oud', '🪵', 'Amaderado', 'Oud, ámbar, especias'], ['fresco', '🍋', 'Fresco', 'Cítricos y aire marino']] },
+      { k: 'when', q: '¿Cuándo lo usarás?', o: [['dia', '☀️', 'De día', 'Oficina, día a día'], ['noche', '✨', 'De noche', 'Salidas y citas'], ['especial', '🎁', 'Para regalar', 'Una ocasión especial']] },
+    ];
+    var FEM = /pink|aura|bonita|femme|florence|rose|bombshell|voca|ajwad|hayaati|lamar|musk|delicious|macaron|dakota|dana|micado/i, MAS = /man|turbo|cadet|rave|blue|oud|ramz|famous|intensity|ejaazi|sudfa|charm|bareq|odyssey/i;
+    var ans = {}, step = 0, quizEl = document.getElementById('quiz');
+    function quiz() {
+      var steps = '<div class="quiz__steps">' + QS.map(function (_, i) { return '<i class="' + (i <= step ? 'on' : '') + '"></i>'; }).join('') + '</div>';
+      if (step < QS.length) {
+        var Q = QS[step];
+        quizEl.innerHTML = '<div class="quiz__top"><span class="eb" style="color:var(--gold)">Test de aroma · ' + (step + 1) + ' de 3</span>' + steps + '</div><h3>' + Q.q + '</h3><div class="opts">' +
+          Q.o.map(function (o) { return '<button class="opt" data-v="' + o[0] + '"><em>' + o[1] + '</em><b>' + o[2] + '</b><span>' + o[3] + '</span></button>'; }).join('') + '</div>';
+      } else {
+        var picks = recommend();
+        quizEl.innerHTML = '<div class="quiz__top"><span class="eb" style="color:var(--gold)">Tu resultado</span>' + steps + '</div><h3>Te van a encantar estas tres.</h3><div class="quiz__res">' +
+          picks.map(cardHTML).join('') + '</div><button class="quiz__again" data-again>Volver a empezar</button>';
+        syncButtons();
+      }
+    }
+    function recommend() {
+      var scored = CAT.filter(function (p) { return p.c !== 'mayor'; }).map(function (p, i) {
+        var s = 0, t = p.t + ' ' + p.h;
+        if (p.c === ans.fam) s += 6;
+        if (ans.who === 'ella') s += FEM.test(t) ? 3 : (MAS.test(t) ? -2 : 0);
+        if (ans.who === 'el') s += MAS.test(t) ? 3 : (FEM.test(t) ? -3 : 0);
+        if (ans.when === 'noche') s += (p.c === 'oud' ? 2 : 0) + (/night|nujoom|nujom|intens|elixir|rouge/i.test(t) ? 1 : 0);
+        if (ans.when === 'dia') s += (p.c === 'fresco' || p.c === 'floral') ? 1.5 : 0;
+        if (ans.when === 'especial') s += Number(p.p) > 25 ? 2 : 0;
+        return { p: p, s: s + (p.photo ? 0.6 : 0) + ((i * 7) % 10) / 100 };
+      });
+      scored.sort(function (a, b) { return b.s - a.s; });
+      return scored.slice(0, 3).map(function (x) { return x.p; });
+    }
+    quizEl.addEventListener('click', function (e) {
+      var o = e.target.closest('.opt');
+      if (o) { ans[QS[step].k] = o.dataset.v; step++; quiz(); return; }
+      if (e.target.closest('[data-again]')) { ans = {}; step = 0; quiz(); }
+    });
+
+    // ---------- cart ----------
+    var cart = {};
+    try { cart = JSON.parse(localStorage.getItem('lr-cart') || '{}') || {}; } catch (e) { cart = {}; }
+    Object.keys(cart).forEach(function (h) { if (!byH[h]) delete cart[h]; });
+    function save() { try { localStorage.setItem('lr-cart', JSON.stringify(cart)); } catch (e) {} }
+    var fab = document.getElementById('fab'), drawer = document.getElementById('drawer');
+    function totals() { var n = 0, t = 0; Object.keys(cart).forEach(function (h) { n += cart[h]; t += cart[h] * Number(byH[h].p); }); return { n: n, t: t }; }
+    function syncButtons() {
+      document.querySelectorAll('[data-add]').forEach(function (b) { var q = cart[b.dataset.add]; b.classList.toggle('done', !!q); b.textContent = q ? 'En tu selección (' + q + ')' : 'Agregar'; });
+    }
+    function update(bump) {
+      var T = totals();
+      document.getElementById('fabN').textContent = T.n;
+      document.getElementById('fabTxt').textContent = money(T.t);
+      fab.classList.toggle('show', T.n > 0);
+      if (bump) { fab.classList.remove('bump'); void fab.offsetWidth; fab.classList.add('bump'); }
+      document.getElementById('tot').textContent = money(T.t);
+      var hs = Object.keys(cart);
+      document.getElementById('lines').innerHTML = hs.length ? hs.map(function (h) {
+        var p = byH[h];
+        return '<div class="line"><img src="' + img(p) + '" alt=""><div><b>' + esc(p.t) + '</b><small>' + money(p.p) + ' · ' + esc(p.s) + '</small></div>' +
+          '<div class="qty"><button data-dec="' + h + '" aria-label="Quitar uno">−</button><span>' + cart[h] + '</span><button data-inc="' + h + '" aria-label="Agregar uno">+</button></div></div>';
+      }).join('') : '<p class="note" style="margin-top:32px">Aún no has elegido perfumes.</p>';
+      var link = STORE + '/cart/' + hs.map(function (h) { return byH[h].v + ':' + cart[h]; }).join(',');
+      var co = document.getElementById('checkout');
+      co.href = hs.length ? link : STORE; co.style.opacity = hs.length ? 1 : .5;
+      syncButtons(); save();
+    }
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('[data-add]'), inc = e.target.closest('[data-inc]'), dec = e.target.closest('[data-dec]');
+      if (a) { var h = a.dataset.add; cart[h] = (cart[h] || 0) + 1; update(true); }
+      else if (inc) { cart[inc.dataset.inc]++; update(); }
+      else if (dec) { var k = dec.dataset.dec; if (--cart[k] <= 0) delete cart[k]; update(); }
+      else if (e.target.closest('[data-close]')) { drawer.classList.remove('open'); drawer.setAttribute('aria-hidden', 'true'); }
+    });
+    var modal = document.getElementById('modal'), modalP = document.getElementById('modalP');
+    var NL = ['Salida', 'Corazón', 'Fondo'];
+    function openModal(h) {
+      var p = byH[h]; if (!p) return;
+      modalP.style.setProperty('--c', p.liq);
+      modalP.innerHTML = '<button class="x" data-mclose aria-label="Cerrar">×</button><div class="modal__img' + (p.photo ? ' photo' : '') + '"><img src="' + full(p) + '" alt="' + esc(p.t) + '"></div><div class="modal__b">' +
+        '<span class="eb">' + esc(p.house || COLS[p.c]) + '</span><h3 id="mTitle">' + esc(p.t) + '</h3>' +
+        '<p>' + esc(p.desc || (p.c === 'mayor' ? '50 perfumes árabes originales y surtidos en una sola caja, ideal para tu negocio.' : 'Perfume árabe original de la colección ' + COLS[p.c] + '. Escríbenos y te contamos sus notas.')) + '</p>' +
+        (p.notes ? '<ul class="notes">' + p.notes.map(function (n, i) { return '<li><b>' + NL[i] + '</b><span>' + esc(n) + '</span></li>'; }).join('') + '</ul>' : '') +
+        '<div class="card__meta">' + esc(p.s) + ' · ' + COLS[p.c] + '</div>' +
+        '<div class="modal__row"><span class="price">' + money(p.p) + '</span><button class="add" data-add="' + p.h + '">Agregar</button>' +
+        '<a href="' + STORE + '/products/' + p.h + '" target="_blank" rel="noopener" class="card__meta">Ver en tienda</a></div></div>';
+      modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false'); syncButtons();
+      modalP.querySelector('.x').focus();
+    }
+    function closeModal() { modal.classList.remove('open'); modal.setAttribute('aria-hidden', 'true'); }
+    modal.addEventListener('click', function (e) { if (e.target === modal || e.target.closest('[data-mclose]')) closeModal(); });
+    document.addEventListener('click', function (e) { var o = e.target.closest('[data-open]'); if (o) { e.preventDefault(); openModal(o.dataset.open); } });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+    fab.addEventListener('click', function () { drawer.classList.add('open'); drawer.setAttribute('aria-hidden', 'false'); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') drawer.classList.remove('open'); });
+
+    var shop = document.getElementById('catalogo');
+    function onScroll() { document.body.classList.toggle('in-shop', shop.getBoundingClientRect().top < 90); }
+    window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+    render(); quiz(); update();
+  })();
+  </script>
+</body>
+</html>
